@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Challenges in Frontend Mentor</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            /* background-color: aqua; */
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        .color-acento {
+            color: blueviolet;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            font-size: 2em;
+        }
+        
+        h3 {
+            font-size: 1.5em;
+        }
+        
+        p {
+            font-size: 1.2em;
+        }
+        
+        .container,
+        .header-container,
+        .footer-container {
+            width: 100%;
+            margin: auto;
+        }
+        
+        .nav-head {
+            font-size: 17px;
+            display: flex;
+            /* Permite Organizar los elementos */
+            justify-content: space-between;
+            /* Va a utilizar todo el ancho disponible */
+            align-items: center;
+            height: 80px;
+            padding: 20px 0;
+            margin: 0 20px 0 20px;
+        }
+        
+        .nav-brand {
+            padding-top: 15px;
+        }
+        
+        .gem {
+            left: 15px;
+            font-size: 15px;
+            padding-top: 15px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            transition: 0.5s;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+            color: blueviolet;
+        }
+        
+        .gem-span {
+            color: blueviolet;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+        
+        .header-container {
+            width: 100%;
+            background-color: wheat;
+            position: fixed;
+        }
+        
+        button {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px 30px;
+            border-radius: 10px;
+            border: 1px solid #212121;
+            box-shadow: 2px 2px 10px #212121;
+            color: white;
+            background-color: blueviolet;
+            transition: 0.5s;
+        }
+        
+        button:hover {
+            background-color: white;
+            color: blueviolet;
+        }
+        
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            height: 90vh;
+            background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./media/hero.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        #hero button {
+            font-size: 1.75em;
+            margin-top: 45px;
+        }
+        
+        #hero h1 {
+            color: white;
+            margin: 0 10px 0 10px;
+        }
+        
+        .span-banner {
+            font-size: 1.3em;
+        }
+        
+        #im-eze .container {
+            text-align: center;
+            padding: 200px 12px;
+        }
+        
+        #im-eze p {
+            margin-top: 25px;
+        }
+        
+        #my-challenges {
+            background-color: rgb(30, 30, 30);
+            color: white;
+            text-align: center;
+        }
+        
+        #my-challenges .container {
+            padding: 150px 12px;
+        }
+        
+        #my-challenges h2 {
+            margin-top: 0px;
+            font-size: 3.2em;
+        }
+        
+        #my-challenges p {
+            display: none;
+        }
+        
+        #my-challenges .cart {
+            background-position: center center;
+            background-size: cover;
+            padding: 50px 0px;
+            margin: 30px;
+            border-radius: 15px;
+        }
+        
+        .cart:first-child {
+            background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./media/front-end.jpg);
+        }
+        /* Seleccionar el segundo */
+        
+        .cart:nth-child(2) {
+            background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./media/full-stack.jpg);
+        }
+        /* Seleccionar el tercero */
+        
+        .cart:nth-child(3) {
+            background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./media/python.jpg);
+        }
+        
+        .cart button {
+            margin-top: 35px;
+        }
+        
+        footer {
+            background-color: rgb(230, 230, 230);
+        }
+        
+        footer p {
+            margin: 0;
+            padding: 12px;
+            color: rgb(100, 100, 100);
+        }
+        
+        footer .container {
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        /* Cuando el ancho supere los 720px se aplica */
+        
+        @media (min-width: 720px) {
+            header {
+                position: fixed;
+                width: 100%;
+            }
+            header .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            header nav {
+                flex-direction: row;
+                padding-bottom: 0;
+                padding-right: 20px;
+            }
+            .nav-head {
+                margin: 0 100px 0 100px;
+            }
+            #hero h1 {
+                font-size: 5em;
+            }
+            #im-eze .container {
+                display: flex;
+                justify-content: space-evenly;
+            }
+            #im-eze .text {
+                width: 50%;
+                max-width: 600px;
+                text-align: initial;
+                padding-left: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            #im-eze h2 {
+                margin-top: 0;
+            }
+            #im-eze .img-container {
+                background-image: url("./media/somos-proya.jpg");
+                background-size: cover;
+                background-position: center center;
+                height: 500px;
+                width: 400px;
+                border-radius: 40%;
+            }
+            #my-challenges .programs {
+                display: flex;
+                justify-content: center;
+            }
+            #my-challenges p {
+                display: block;
+                margin-bottom: 30px;
+                padding-top: 50px;
+            }
+            #my-challenges h2 {
+                font-size: 4em;
+            }
+            #my-challenges h3 {
+                margin-bottom: 30px;
+                margin-top: 0;
+            }
+            #my-challenges .cart {
+                padding: 50px;
+                background-size: 100% 150px;
+                background-repeat: no-repeat;
+                background-position-y: 0;
+                background-color: rgb(50, 50, 50, 1);
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            }
+            .cart:first-child {
+                background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./media/front-end-cropped.jpg);
+            }
+            /* Seleccionar el segundo */
+            .cart:nth-child(2) {
+                background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./media/full-stack-cropped.jpg);
+            }
+            /* Seleccionar el tercero */
+            .cart:nth-child(3) {
+                background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./media/python-cropped.jpg);
+            }
+            footer .container {
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-container">
+        <nav class="nav-head">
+            <a href="https://www.frontendmentor.io/home" target="_blank">
+                <img src="https://www.frontendmentor.io/static/images/logo-desktop.svg" alt="" class="nav-brand" />
+            </a>
+            <a href="https://egiam.github.io/" class="gem" target="_blank">
+          Ezequiel Giampaoli - <span class="gem-span">GEM</span>
+        </a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="hero">
+            <h1>
+                <span class="span-banner">My Challenges</span> <br /> in Frontend Mentor
+            </h1>
+            <form action="#my-challenges">
+                <button>View Them</button>
+            </form>
+        </section>
+
+        <section id="im-eze">
+            <div class="container">
+                <div class="img-container"></div>
+                <div class="text">
+                    <h2>I am <span class="color-acento"> Ezequiel Giampaoli </span></h2>
+                    <p>
+                        A Junior Web Developer, who is looking for new experiences to develop in the area.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="my-challenges">
+            <div class="container">
+                <h2>My Challenges</h2>
+                <div class="programs">
+                    <!--  -->
+                    <div class="cart">
+                        <h3>Challenge ...</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro qui cumque hic labore? Dicta temporibus deserunt, sed, ut delectus iure accusantium alias eum exercitationem ipsum iste suscipit repellat necessitatibus id.
+                        </p>
+                        <form action="">
+                            <button>+ Info</button>
+                        </form>
+                    </div>
+                    <!--  -->
+                    <div class="cart">
+                        <h3>Challenge ...</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro qui cumque hic labore? Dicta temporibus deserunt, sed, ut delectus iure accusantium alias eum exercitationem ipsum iste suscipit repellat necessitatibus id.
+                        </p>
+                        <form action="">
+                            <button>+ Info</button>
+                        </form>
+                    </div>
+                    <!--  -->
+                    <div class="cart">
+                        <h3>Challenge ...</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro qui cumque hic labore? Dicta temporibus deserunt, sed, ut delectus iure accusantium alias eum exercitationem ipsum iste suscipit repellat necessitatibus id.
+                        </p>
+                        <form action="">
+                            <button>+ Info</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <div class="container">
+            <p>&copy; Ezequiel Giampaoli - GEM 2022</p>
+        </div>
+    </footer>
+</body>
+
+</html>
