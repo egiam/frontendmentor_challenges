@@ -22,8 +22,8 @@ Create the whole page and made it responsive.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/egiam/frontendmentor_challenges)
-- Live Site URL: [Add live site URL here](https://egiam.github.io/frontendmentor_challenges/)
+- Solution URL: [GitHub Repository](https://github.com/egiam/frontendmentor_challenges)
+- Live Site URL: [Web Page](https://egiam.github.io/frontendmentor_challenges/)
 
 ## My process
 
@@ -35,8 +35,8 @@ Create the whole page and made it responsive.
 
 ### Useful resources
 
-- [Example resource 1](https://github.com/egiam/Web-Site-Project-devichoi) - My last web project helped me to do this, as if you review it it will be very similar.
-- [Example resource 2](https://egiam.github.io/Web-Site-Project-devichoi/) - Live Server of the project.
+- [GitHub Repository](https://github.com/egiam/Web-Site-Project-devichoi) - My last web project helped me to do this, as if you review it it will be very similar.
+- [Web Page](https://egiam.github.io/Web-Site-Project-devichoi/) - Live Server of the project.
 
 ## Author
 
