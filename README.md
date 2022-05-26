@@ -36,7 +36,7 @@ Create the whole page and made it responsive.
 ### Useful resources
 
 - [GitHub Repository](https://github.com/egiam/Web-Site-Project-devichoi) - My last web project helped me to do this, as if you review it it will be very similar.
-- [Web Page](https://egiam.github.io/Web-Site-Project-devichoi/) - Live Server of the project.
+- [Web Page](https://egiam.github.io/Web-Site-Project-devichoi/) - Live Server of the last project.
 
 ## Author
 
